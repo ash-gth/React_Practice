@@ -1,12 +1,35 @@
 import HelloWorld from "./Components/HelloWorld"
 import LearnReact from "./Components/LearnReact"
 import Learnjsx from "./Components/learnjsx"
-function App() {
+import LearnProps from "./Components/LearnProps"
+import PropsCard from "./Components/PropsCard"
 
+function App() {
+  const price_1= 300;
+  const data = {
+    stock1: {
+     name:'reliance',
+     price:200,
+    },
+    stock2: {
+     name:'tesla',
+     price:300,
+    },
+    stock3: {
+     name:'iron',
+     price:500,
+    },
+  } 
+  
   return (
     <>
       <h1>Learn React</h1> 
       <Learnjsx />
+      <LearnProps stock= 'Tesla' price= {price_1}/>
+      <PropsCard name = {data.stock1.name} price = {data.stock1.price}    />
+      <PropsCard name = {data.stock2.name} price = {data.stock2.price}    />
+      <PropsCard name = {data.stock3.name} price = {data.stock3.price}    />
+      
       </>
   )
 }
