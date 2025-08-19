@@ -7,7 +7,7 @@ import LearnEvent from './Components/LearnEvent'
 import LearnLiftingStateUp from './Components/LearnLiftingStateUp'
 import NewCard from "./Components/NewCard"
 import { useState } from "react"
-
+import UseState from "./Components/UseState"
 
 
 function App() {
@@ -71,8 +71,9 @@ function App() {
       {/* <div>Name: {info.name}</div>
       <div>Age: {info.age}</div>
       <div>DOB: {info.dob}</div> */}
-      <LearnLiftingStateUp getdata={getdata} />
-      <NewCard data={info}/>
+      {/* // <LearnLiftingStateUp getdata={getdata} />
+      // <NewCard data={info}/> */}
+      <UseState />
       
       </>
   )
