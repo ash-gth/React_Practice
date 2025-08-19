@@ -4,9 +4,15 @@ import Learnjsx from "./Components/learnjsx"
 import LearnProps from "./Components/LearnProps"
 import PropsCard from "./Components/PropsCard"
 import LearnEvent from './Components/LearnEvent'
+import LearnLiftingStateUp from './Components/LearnLiftingStateUp'
+import NewCard from "./Components/NewCard"
+import { useState } from "react"
+
+
+
 function App() {
   const price_1= 300;
-  const data = {
+  const data1 = {
     stock1: {
      name:'reliance',
      price:200,
@@ -35,7 +41,16 @@ function App() {
     },
     
   ]
+  const getdata = (data) => {
+         setinfo(data);
+  }
+  const dummyData = {
+    name: '',
+    age: '',
+    dob:''
+  }
   
+  const[info, setinfo] = useState(dummyData)
   return (
     <>
       <h1>Learn React</h1> 
@@ -52,7 +67,12 @@ function App() {
         ))
       } */}
 
-      <LearnEvent />
+      {/* <LearnEvent /> */}
+      {/* <div>Name: {info.name}</div>
+      <div>Age: {info.age}</div>
+      <div>DOB: {info.dob}</div> */}
+      <LearnLiftingStateUp getdata={getdata} />
+      <NewCard data={info}/>
       
       </>
   )
