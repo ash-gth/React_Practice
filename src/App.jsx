@@ -11,7 +11,7 @@ import UseState from "./Components/UseState"
 import CounterApp from "./Components/CounterApp"
 import UseEffect from "./Components/UseEffect"
 import UseMemo from "./Components/UseMemo"
-
+import ChildA from './Components/ChildA'
 
 function App() {
   const price_1= 300;
@@ -52,7 +52,12 @@ function App() {
     age: '',
     dob:''
   }
+
   
+   let stock = {
+    stock: 'Apple',
+    price: 300
+   }
   const[info, setinfo] = useState(dummyData)
   return (
     <>
@@ -79,7 +84,8 @@ function App() {
       {/* <UseState /> */}
       {/* <CounterApp /> */}
       {/* <UseEffect /> */}
-      <UseMemo />
+      {/* <UseMemo /> */}
+      <ChildA stock = {stock}/>
       </>
   )
 }

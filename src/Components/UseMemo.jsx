@@ -26,11 +26,8 @@ function UseMemo() {
 
 
     <h2>Count: {count}</h2>
-    <button onClick={increaseNumber}>Increase Number</button>
-
-    
+    <button onClick={increaseNumber}>Increase Number</button>  
     </>
   )
 }
-
 export default UseMemo
