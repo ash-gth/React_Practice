@@ -9,6 +9,7 @@ import NewCard from "./Components/NewCard"
 import { useState } from "react"
 import UseState from "./Components/UseState"
 import CounterApp from "./Components/CounterApp"
+import UseEffect from "./Components/UseEffect"
 
 function App() {
   const price_1= 300;
@@ -74,7 +75,8 @@ function App() {
       {/* // <LearnLiftingStateUp getdata={getdata} />
       // <NewCard data={info}/> */}
       {/* <UseState /> */}
-      <CounterApp />
+      {/* <CounterApp /> */}
+      <UseEffect />
       </>
   )
 }
