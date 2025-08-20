@@ -10,6 +10,8 @@ import { useState } from "react"
 import UseState from "./Components/UseState"
 import CounterApp from "./Components/CounterApp"
 import UseEffect from "./Components/UseEffect"
+import UseMemo from "./Components/UseMemo"
+
 
 function App() {
   const price_1= 300;
@@ -76,7 +78,8 @@ function App() {
       // <NewCard data={info}/> */}
       {/* <UseState /> */}
       {/* <CounterApp /> */}
-      <UseEffect />
+      {/* <UseEffect /> */}
+      <UseMemo />
       </>
   )
 }
