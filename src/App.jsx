@@ -8,7 +8,7 @@ import LearnLiftingStateUp from './Components/LearnLiftingStateUp'
 import NewCard from "./Components/NewCard"
 import { useState } from "react"
 import UseState from "./Components/UseState"
-
+import CounterApp from "./Components/CounterApp"
 
 function App() {
   const price_1= 300;
@@ -73,8 +73,8 @@ function App() {
       <div>DOB: {info.dob}</div> */}
       {/* // <LearnLiftingStateUp getdata={getdata} />
       // <NewCard data={info}/> */}
-      <UseState />
-      
+      {/* <UseState /> */}
+      <CounterApp />
       </>
   )
 }
