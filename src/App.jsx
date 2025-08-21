@@ -13,6 +13,7 @@ import UseEffect from "./Components/UseEffect"
 import UseMemo from "./Components/UseMemo"
 import ChildA from './Components/ChildA'
 import { createContext } from "react"
+import UseRef from "./Components/UseRef"
 
 const PriceContext = createContext();
 const UserContext = createContext();
@@ -55,11 +56,17 @@ function App() {
       {/* <UseEffect /> */}
       {/* <UseMemo /> */}
       {/* <ChildA stock = {stock}/> */}
-      <UserContext.Provider value= {user}>
+      {/* <UserContext.Provider value= {user}>
         <PriceContext.Provider value={price_1}>
           <ChildA />
         </PriceContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+
+      
+<UseRef />
+
+
+
       </>
   )
 }
