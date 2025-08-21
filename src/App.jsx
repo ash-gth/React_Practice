@@ -12,53 +12,16 @@ import CounterApp from "./Components/CounterApp"
 import UseEffect from "./Components/UseEffect"
 import UseMemo from "./Components/UseMemo"
 import ChildA from './Components/ChildA'
+import { createContext } from "react"
+
+const PriceContext = createContext()
+// create provider consumer
 
 function App() {
-  const price_1= 300;
-  const data1 = {
-    stock1: {
-     name:'reliance',
-     price:200,
-    },
-    stock2: { 
-     name:'tesla',
-     price:300,
-    },
-    stock3: {
-     name:'iron',
-     price:500,
-    },
-  } 
-  const list = [
-    {
-      name : "apple",
-      price : 300
-    },
-    {
-      name : "Tesla",
-      price : 900
-    },
-    {
-      name : "VI",
-      price : 100
-    },
-    
-  ]
-  const getdata = (data) => {
-         setinfo(data);
-  }
-  const dummyData = {
-    name: '',
-    age: '',
-    dob:''
-  }
 
   
-   let stock = {
-    stock: 'Apple',
-    price: 300
-   }
-  const[info, setinfo] = useState(dummyData)
+  const price_1= 300;
+
   return (
     <>
       <h1>Learn React</h1> 
@@ -79,15 +42,21 @@ function App() {
       {/* <div>Name: {info.name}</div>
       <div>Age: {info.age}</div>
       <div>DOB: {info.dob}</div> */}
-      {/* // <LearnLiftingStateUp getdata={getdata} />
-      // <NewCard data={info}/> */}
+      {/* <LearnLiftingStateUp getdata={getdata} /> */}
+    {/* <NewCard data={info}/>  */}
       {/* <UseState /> */}
       {/* <CounterApp /> */}
       {/* <UseEffect /> */}
       {/* <UseMemo /> */}
-      <ChildA stock = {stock}/>
+      {/* <ChildA stock = {stock}/> */}
+        <PriceContext.Provider value={price_1}>
+          <ChildA />
+        </PriceContext.Provider>
+
+
       </>
   )
 }
 
 export default App
+export { PriceContext }
