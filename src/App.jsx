@@ -14,7 +14,7 @@ import UseMemo from "./Components/UseMemo"
 import ChildA from './Components/ChildA'
 import { createContext } from "react"
 import UseRef from "./Components/UseRef"
-
+import CustomHooks from "./Components/CustomHooks"
 const PriceContext = createContext();
 const UserContext = createContext();
 
@@ -61,10 +61,8 @@ function App() {
           <ChildA />
         </PriceContext.Provider>
       </UserContext.Provider> */}
-
-      
-<UseRef />
-
+{/* <UseRef /> */}
+<CustomHooks />
 
 
       </>
