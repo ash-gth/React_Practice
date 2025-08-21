@@ -14,14 +14,20 @@ import UseMemo from "./Components/UseMemo"
 import ChildA from './Components/ChildA'
 import { createContext } from "react"
 
-const PriceContext = createContext()
+const PriceContext = createContext();
+const UserContext = createContext();
+
 // create provider consumer
 
 function App() {
 
   
   const price_1= 300;
+  const user = {
+    username: 'Ashish',
+    roll_no:'10415602722',
 
+  }
   return (
     <>
       <h1>Learn React</h1> 
@@ -49,14 +55,14 @@ function App() {
       {/* <UseEffect /> */}
       {/* <UseMemo /> */}
       {/* <ChildA stock = {stock}/> */}
+      <UserContext.Provider value= {user}>
         <PriceContext.Provider value={price_1}>
           <ChildA />
         </PriceContext.Provider>
-
-
+      </UserContext.Provider>
       </>
   )
 }
 
 export default App
-export { PriceContext }
+export { PriceContext, UserContext }

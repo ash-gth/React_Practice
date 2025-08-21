@@ -1,14 +1,17 @@
-import React from 'react'
-import { PriceContext } from '../App'
-function ChildC(props) {
-    console.log("stock")
+import React, {useContext} from 'react'
+import { PriceContext, UserContext } from '../App'
+
+function ChildC() {
+  
+      const userData = useContext(UserContext);
+
+      console.log(userData);
   return (
     <>
     {/* <div>ChildC</div>
     <h2>stock : {props.stock.stock} </h2> */}
 
-    <PriceContext.Consumer>
-
+    {/* <PriceContext.Consumer>
       {
         (price) => {
           return(
@@ -19,8 +22,10 @@ function ChildC(props) {
           )
         }
       }
-
-    </PriceContext.Consumer>
+    </PriceContext.Consumer> */}
+ 
+    <h2>user's username is : {userData.username}</h2>
+   
     </>
     
   )
