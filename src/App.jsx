@@ -15,6 +15,8 @@ import ChildA from './Components/ChildA'
 import { createContext } from "react"
 import UseRef from "./Components/UseRef"
 import CustomHooks from "./Components/CustomHooks"
+import Welcome from "./Components/Welcome" 
+import LearnMap from "./Components/LearnMap"
 const PriceContext = createContext();
 const UserContext = createContext();
 
@@ -31,7 +33,7 @@ function App() {
   }
   return (
     <>
-      <h1>Learn React</h1> 
+     
       {/* <Learnjsx /> */}
       {/* <LearnProps stock= 'Tesla' price= {price_1}/> */}
       {/* <PropsCard name = {data.stock1.name} price = {data.stock1.price}    />
@@ -62,9 +64,10 @@ function App() {
         </PriceContext.Provider>
       </UserContext.Provider> */}
 {/* <UseRef /> */}
-<CustomHooks />
+{/* <CustomHooks /> */}
 
-
+<Welcome />
+{/* <LearnMap /> */}
       </>
   )
 }
