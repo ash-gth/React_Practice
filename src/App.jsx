@@ -34,6 +34,9 @@ function App() {
   return (
     <>
      
+<HelloWorld />
+
+
       {/* <Learnjsx /> */}
       {/* <LearnProps stock= 'Tesla' price= {price_1}/> */}
       {/* <PropsCard name = {data.stock1.name} price = {data.stock1.price}    />
@@ -66,7 +69,7 @@ function App() {
 {/* <UseRef /> */}
 {/* <CustomHooks /> */}
 
-<Welcome />
+{/* <Welcome /> */}
 {/* <LearnMap /> */}
       </>
   )
